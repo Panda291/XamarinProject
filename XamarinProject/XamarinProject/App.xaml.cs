@@ -3,6 +3,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinProject.Services;
 using XamarinProject.Views;
+using SQLitePCL;
+using System.IO;
 
 namespace XamarinProject
 {
@@ -15,6 +17,7 @@ namespace XamarinProject
 
             DependencyService.Register<MyDataStore>();
             MainPage = new MainPage();
+
         }
 
         protected override void OnStart()
@@ -27,6 +30,21 @@ namespace XamarinProject
 
         protected override void OnResume()
         {
+        }
+
+        static CardDatabase database;
+
+        public static CardDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new CardDatabase(
+                      Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SQLite.db3"));
+                }
+                return database;
+            }
         }
     }
 }
