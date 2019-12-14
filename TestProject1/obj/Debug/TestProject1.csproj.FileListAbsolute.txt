@@ -1,0 +1,10 @@
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\bin\Debug\TestProject1.dll
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\bin\Debug\TestProject1.pdb
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\bin\Debug\nunit.framework.dll
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\bin\Debug\XamarinProject.dll
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\bin\Debug\XamarinProject.pdb
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\bin\Debug\nunit.framework.xml
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\obj\Debug\TestProject1.csprojAssemblyReference.cache
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\obj\Debug\TestProject1.csproj.CopyComplete
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\obj\Debug\TestProject1.dll
+D:\downloads\school\fase3\C#\XamarinProject\TestProject1\obj\Debug\TestProject1.pdb
