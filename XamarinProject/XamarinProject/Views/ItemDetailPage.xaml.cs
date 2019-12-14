@@ -1,10 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 using XamarinProject.Models;
 using XamarinProject.ViewModels;
+using XamarinProject;
 
 namespace XamarinProject.Views
 {
@@ -13,27 +14,35 @@ namespace XamarinProject.Views
     [DesignTimeVisible(false)]
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        readonly ItemDetailViewModel _viewModel;
+        public Item Item { get; set; }
+        private new int _Id { get; }
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public ItemDetailPage(ItemDetailViewModel viewModel, int id)
         {
             InitializeComponent();
-
-            BindingContext = this.viewModel = viewModel;
+            _Id = id;
+            BindingContext = this._viewModel = viewModel;
         }
 
         public ItemDetailPage()
         {
             InitializeComponent();
 
-            var item = new Item
+            Item = new Item
             {
                 Text = "Item 1",
                 Description = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
-            BindingContext = viewModel;
+            _viewModel = new ItemDetailViewModel(Item);
+            BindingContext = _viewModel;
+        }
+
+        async void Remove_Clicked(object sender, EventArgs e)
+        {
+            MessagingCenter.Send(this, "RemoveItem", _Id);
+            await Navigation.PopAsync();
         }
     }
 }

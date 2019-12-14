@@ -16,3 +16,21 @@ D:\school\fase 3\semester 1\.NET\XamarinProject\XamarinProject\XamarinProject\ob
 D:\school\fase 3\semester 1\.NET\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\ref\XamarinProject.dll
 D:\school\fase 3\semester 1\.NET\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\XamarinProject.pdb
 D:\school\fase 3\semester 1\.NET\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\XamlC.stamp
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\bin\Debug\netstandard2.0\XamarinProject.deps.json
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\bin\Debug\netstandard2.0\XamarinProject.dll
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\bin\Debug\netstandard2.0\ref\XamarinProject.dll
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\bin\Debug\netstandard2.0\XamarinProject.pdb
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\XamarinProject.csprojAssemblyReference.cache
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\XamarinProject.AssemblyInfoInputs.cache
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\XamarinProject.AssemblyInfo.cs
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\XamlC.stamp
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\XamarinProject.dll
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\ref\XamarinProject.dll
+D:\downloads\school\fase3\C#\XamarinProject\XamarinProject\XamarinProject\obj\Debug\netstandard2.0\XamarinProject.pdb

@@ -10,33 +10,38 @@ namespace XamarinProject.Services
 {
     public class CardDatabase
     {
-        SQLite.SQLiteAsyncConnection database;
+        private readonly SQLite.SQLiteAsyncConnection _database;
         public CardDatabase(string dbPath)
         {
-            database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<Item>().Wait();
+            _database = new SQLiteAsyncConnection(dbPath);
+            _database.CreateTableAsync<Item>().Wait();
         }
 
         public Task<List<Item>> GetItemAsync()
         {
-            return database.Table<Item>().ToListAsync();
+            return _database.Table<Item>().ToListAsync();
         }
 
         public Task<Item> GetItemAsync(int id)
         {
-            return database.Table<Item>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return _database.Table<Item>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
         public Task<int> SaveItemAsync(Item card)
         {
             if (card.Id != 0)
             {
-                return database.UpdateAsync(card);
+                return _database.UpdateAsync(card);
             }
             else
             {
-                return database.InsertAsync(card);
+                return _database.InsertAsync(card);
             }
+        }
+
+        public Task<int> DeleteItemAsync(Item item)
+        {
+            return _database.DeleteAsync(item);
         }
     }
 }

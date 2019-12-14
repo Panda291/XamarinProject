@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\XamarinProject.iOS.csproj": {}
+    "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\XamarinProject.iOS.csproj": {}
   },
   "projects": {
-    "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\XamarinProject.iOS.csproj": {
+    "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\XamarinProject.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\XamarinProject.iOS.csproj",
+        "projectUniqueName": "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\XamarinProject.iOS.csproj",
         "projectName": "XamarinProject.iOS",
-        "projectPath": "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\XamarinProject.iOS.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\obj\\",
+        "projectPath": "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\XamarinProject.iOS.csproj",
+        "packagesPath": "C:\\Users\\christophe\\.nuget\\packages\\",
+        "outputPath": "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\christophe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj": {
-                "projectPath": "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj"
+              "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj": {
+                "projectPath": "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj"
               }
             }
           }
@@ -65,20 +65,20 @@
         }
       }
     },
-    "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj": {
+    "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj",
+        "projectUniqueName": "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj",
         "projectName": "XamarinProject",
-        "projectPath": "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "D:\\school\\fase 3\\semester 1\\.NET\\XamarinProject\\XamarinProject\\XamarinProject\\obj\\",
+        "projectPath": "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject\\XamarinProject.csproj",
+        "packagesPath": "C:\\Users\\christophe\\.nuget\\packages\\",
+        "outputPath": "D:\\downloads\\school\\fase3\\C#\\XamarinProject\\XamarinProject\\XamarinProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\christophe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -131,8 +131,7 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }
