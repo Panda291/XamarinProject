@@ -7,27 +7,27 @@ using XamarinProject.Models;
 
 namespace XamarinProject.Services
 {
-    public class MyDataStore : IDataStore<Item>
+    public class MyDataStore : IDataStore<Card>
     {
-        readonly List<Item> _items;
+        readonly List<Card> _items;
         public MyDataStore()
         {
             _items = App.Database.GetItemAsync().Result;
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        public async Task<bool> AddItemAsync(Card card)
         {
-//            _items.Add(item);
+            _items.Add(card);
 
-            await App.Database.SaveItemAsync(item);
+            await App.Database.SaveItemAsync(card);
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        public async Task<bool> UpdateItemAsync(Card card)
         {
-            var oldItem = _items.FirstOrDefault(arg => arg.Id == item.Id);
+            var oldItem = _items.FirstOrDefault(arg => arg.Id == card.Id);
             _items.Remove(oldItem);
-            _items.Add(item);
+            _items.Add(card);
 
             return await Task.FromResult(true);
         }
@@ -40,12 +40,12 @@ namespace XamarinProject.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(int id)
+        public async Task<Card> GetItemAsync(int id)
         {
             return await Task.FromResult(_items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Card>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(_items);
         }

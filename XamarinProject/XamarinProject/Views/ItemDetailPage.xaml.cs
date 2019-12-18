@@ -15,7 +15,7 @@ namespace XamarinProject.Views
     public partial class ItemDetailPage : ContentPage
     {
         readonly ItemDetailViewModel _viewModel;
-        public Item Item { get; set; }
+        public Card Card { get; set; }
         private new int _Id { get; }
 
         public ItemDetailPage(ItemDetailViewModel viewModel, int id)
@@ -29,13 +29,13 @@ namespace XamarinProject.Views
         {
             InitializeComponent();
 
-            Item = new Item
+            Card = new Card
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                Name = "Item 1",
+                Type = "This is an item description."
             };
 
-            _viewModel = new ItemDetailViewModel(Item);
+            _viewModel = new ItemDetailViewModel(Card);
             BindingContext = _viewModel;
         }
 

@@ -14,20 +14,20 @@ namespace XamarinProject.Services
         public CardDatabase(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<Item>().Wait();
+            _database.CreateTableAsync<Card>().Wait();
         }
 
-        public Task<List<Item>> GetItemAsync()
+        public Task<List<Card>> GetItemAsync()
         {
-            return _database.Table<Item>().ToListAsync();
+            return _database.Table<Card>().ToListAsync();
         }
 
-        public Task<Item> GetItemAsync(int id)
+        public Task<Card> GetItemAsync(int id)
         {
-            return _database.Table<Item>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return _database.Table<Card>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveItemAsync(Item card)
+        public Task<int> SaveItemAsync(Card card)
         {
             if (card.Id != 0)
             {
@@ -39,9 +39,9 @@ namespace XamarinProject.Services
             }
         }
 
-        public Task<int> DeleteItemAsync(Item item)
+        public Task<int> DeleteItemAsync(Card card)
         {
-            return _database.DeleteAsync(item);
+            return _database.DeleteAsync(card);
         }
     }
 }

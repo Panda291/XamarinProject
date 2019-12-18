@@ -14,10 +14,42 @@
     
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small" />
-            <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" Margin="0" />
+            <Label Text="Name" FontSize="Medium" />
+            <Entry Text="{Binding Card.Name}" d:Placeholder="Name" FontSize="Small" />
+            <Label Text="Type" FontSize="Medium" />
+            <Picker x:Name="Type"
+                    Title="Select a Type"
+                    TitleColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Spellcaster</x:String>
+                        <x:String>Pyro</x:String>
+                        <x:String>Aqua</x:String>
+                        <x:String>Fiend</x:String>
+                        <x:String>Machine</x:String>
+                        <x:String>Fairy</x:String>
+                        <x:String>Beast</x:String>
+                        <x:String>Beast-Warrior</x:String>
+                        <x:String>Warrior</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Attribute" FontSize="Medium" />
+            <Picker x:Name="Attribute"
+                    Title="Select an Attribute"
+                    TitleColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Fire</x:String>
+                        <x:String>Water</x:String>
+                        <x:String>Dark</x:String>
+                        <x:String>Wind</x:String>
+                        <x:String>Earth</x:String>
+                        <x:String>Light</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+                    
         </StackLayout>
     </ContentPage.Content>
     

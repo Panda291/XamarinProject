@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 using XamarinProject.Models;
 
 namespace XamarinProject.Views
@@ -13,24 +12,31 @@ namespace XamarinProject.Views
     [DesignTimeVisible(false)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Card Card { get; set; }
+        private Label TypeLabel { get; set; }
+        private Label AttributeLabel { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
 
-            Item = new Item
+            Card = new Card
             {
-                Text = "Item name",
-                Description = "This is an item description."
+                Name = "Item name",
             };
 
+            TypeLabel = new Label();
+            TypeLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Type));
+            AttributeLabel = new Label();
+            AttributeLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Attribute));
             BindingContext = this;
         }
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+            Card.Type = TypeLabel.Text;
+            Card.Attribute = AttributeLabel.Text;
+            MessagingCenter.Send(this, "AddItem", Card);
             await Navigation.PopModalAsync();
         }
 

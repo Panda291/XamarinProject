@@ -6,11 +6,11 @@ namespace XamarinProject.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public Card Card { get; set; }
+        public ItemDetailViewModel(Card card = null)
         {
-            Title = item?.Text;
-            Item = item;
+            Title = card?.Name;
+            Card = card;
         }
     }
 }

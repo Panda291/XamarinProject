@@ -6,55 +6,55 @@ using XamarinProject.Models;
 
 namespace XamarinProject.Services
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore : IDataStore<Card>
     {
-        readonly List<Item> items;
+        readonly List<Card> cards;
 
         public MockDataStore()
         {
-            items = new List<Item>()
+            cards = new List<Card>()
             {
-                new Item { Text = "First item", Description="This is an item description." },
-                new Item { Text = "Second item", Description="This is an item description." },
-                new Item { Text = "Third item", Description="This is an item description." },
-                new Item { Text = "Fourth item", Description="This is an item description." },
-                new Item { Text = "Fifth item", Description="This is an item description." },
-                new Item { Text = "Sixth item", Description="This is an item description." }
+                new Card { Name = "First item", Type="This is an item description." },
+                new Card { Name = "Second item", Type="This is an item description." },
+                new Card { Name = "Third item", Type="This is an item description." },
+                new Card { Name = "Fourth item", Type="This is an item description." },
+                new Card { Name = "Fifth item", Type="This is an item description." },
+                new Card { Name = "Sixth item", Type="This is an item description." }
             };
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        public async Task<bool> AddItemAsync(Card card)
         {
-            items.Add(item);
+            cards.Add(card);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        public async Task<bool> UpdateItemAsync(Card card)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
-            items.Remove(oldItem);
-            items.Add(item);
+            var oldItem = cards.Where((Card arg) => arg.Id == card.Id).FirstOrDefault();
+            cards.Remove(oldItem);
+            cards.Add(card);
 
             return await Task.FromResult(true);
         }
 
         public async Task<bool> DeleteItemAsync(int id)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
-            items.Remove(oldItem);
+            var oldItem = cards.Where((Card arg) => arg.Id == id).FirstOrDefault();
+            cards.Remove(oldItem);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(int id)
+        public async Task<Card> GetItemAsync(int id)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+            return await Task.FromResult(cards.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Card>> GetItemsAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(items);
+            return await Task.FromResult(cards);
         }
     }
 }

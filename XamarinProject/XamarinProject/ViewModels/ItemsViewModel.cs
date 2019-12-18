@@ -11,27 +11,27 @@ namespace XamarinProject.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Card> Cards { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Cards = new ObservableCollection<Card>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<NewItemPage, Card>(this, "AddItem", async (obj, item) =>
             {
-                var newItem = item as Item;
-                Items.Add(newItem);
+                var newItem = item as Card;
                 await DataStore.AddItemAsync(newItem);
+                Cards.Add(newItem);
             });
 
             MessagingCenter.Subscribe<ItemDetailPage, int>(this, "RemoveItem", async (obj, id) =>
             {
-                var toRemoveItem = Items.FirstOrDefault(arg => arg.Id == id);
+                var toRemoveItem = Cards.FirstOrDefault(arg => arg.Id == id);
                 await DataStore.DeleteItemAsync(id);
-                Items.Remove(toRemoveItem);
+                Cards.Remove(toRemoveItem);
             });
         }
 
@@ -44,11 +44,11 @@ namespace XamarinProject.ViewModels
 
             try
             {
-                Items.Clear();
+                Cards.Clear();
                 var items = await DataStore.GetItemsAsync(true);
                 foreach (var item in items)
                 {
-                    Items.Add(item);
+                    Cards.Add(item);
                 }
             }
             catch (Exception ex)
