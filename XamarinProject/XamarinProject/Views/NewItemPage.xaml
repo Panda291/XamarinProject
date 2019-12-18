@@ -15,7 +15,7 @@
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
             <Label Text="Name" FontSize="Medium" />
-            <Entry Text="{Binding Card.Name}" d:Placeholder="Name" FontSize="Small" />
+            <Entry Text="{Binding Card.Name}" d:Placeholder="Name" FontSize="Small" x:Name="Name"/>
             <Label Text="Type" FontSize="Medium" />
             <Picker x:Name="Type"
                     Title="Select a Type"
@@ -49,7 +49,8 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-                    
+            <Label Text="Level" FontSize="Medium" />
+            <Entry Keyboard="Numeric" Text="{Binding Card.Level}" x:Name="Level"/>
         </StackLayout>
     </ContentPage.Content>
     

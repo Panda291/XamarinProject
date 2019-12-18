@@ -18,6 +18,8 @@
         <Label Text="{Binding Card.Type}" d:Text="Type" FontSize="Small"/>
         <Label Text="Attribute:" FontSize="Medium" />
         <Label Text="{Binding Card.Attribute}" d:Text="Type" FontSize="Small"/>
+        <Label Text="Level:" FontSize="Medium" />
+        <Label Text="{Binding Card.Level}" d:Text="Type" FontSize="Small"/>
     </StackLayout>
     
 </ContentPage>

@@ -16,7 +16,7 @@ namespace XamarinProject.Views
     {
         readonly ItemDetailViewModel _viewModel;
         public Card Card { get; set; }
-        private new int _Id { get; }
+        private int _Id { get; }
 
         public ItemDetailPage(ItemDetailViewModel viewModel, int id)
         {
