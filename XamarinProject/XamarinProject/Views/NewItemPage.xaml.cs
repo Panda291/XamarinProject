@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Net.Security;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -31,12 +32,16 @@ namespace XamarinProject.Views
 
             TypeLabel = new Label();
             TypeLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Type));
+            Type.SelectedIndexChanged += (sender, args) => { Type.BackgroundColor = Color.Default; };
             AttributeLabel = new Label();
             AttributeLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Attribute));
+            Attribute.SelectedIndexChanged += (sender, args) => { Attribute.BackgroundColor = Color.Default; };
             RarityLabel = new Label();
             RarityLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Rarity));
+            Rarity.SelectedIndexChanged += (sender, args) => { Rarity.BackgroundColor = Color.Default; };
             QualityLabel = new Label();
             QualityLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Quality));
+            Quality.SelectedIndexChanged += (sender, args) => { Quality.BackgroundColor = Color.Default; };
             BindingContext = this;
         }
 
