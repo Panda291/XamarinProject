@@ -44,6 +44,8 @@ namespace XamarinProject.Views
             Quality.SelectedIndexChanged += (sender, args) => { Quality.BackgroundColor = Color.Default; };
             BindingContext = this;
         }
+        
+        public NewItemPage(bool UnitTest){}
 
         async void Save_Clicked(object sender, EventArgs e)
         {
@@ -106,14 +108,14 @@ namespace XamarinProject.Views
             await Navigation.PopModalAsync();
         }
 
-        int IsValidLevel(int Lvl)
+        public int IsValidLevel(int Lvl)
         {
             if (Lvl < 0) return -1;
             if (Lvl > 12) return 1;
             return 0;
         }
 
-        bool IsValidAmount(int Amount)
+        public bool IsValidAmount(int Amount)
         {
             if (Amount <= 0) return false;
             return true;

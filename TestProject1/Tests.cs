@@ -3,6 +3,7 @@ using System.IO;
 using NUnit.Framework;
 using XamarinProject.Models;
 using XamarinProject.Services;
+using XamarinProject.Views;
 
 namespace TestProject1
 {
@@ -10,43 +11,65 @@ namespace TestProject1
     public class Tests
     {
         [Test]
-        public void falseForLowerThan5()
+        public void LevelFalseForLowerThan0()
         {
-            ClassForUnitTest obj = new ClassForUnitTest();
-            var output = obj.isBetween5and10(4);
-            Assert.AreEqual(output, -1, 0, "input smaller than 5 but output not -1");
+            NewItemPage obj = new NewItemPage(true);
+            var output = obj.IsValidLevel(-1);
+            Assert.AreEqual(output, -1, 0, "input smaller than 0 but output not -1");
         }
 
         [Test]
-        public void falseForHigherThan10()
+        public void LevelFalseForHigherThan12()
         {
-            ClassForUnitTest obj = new ClassForUnitTest();
-            var output = obj.isBetween5and10(11);
-            Assert.AreEqual(output, 1, 0, "input higher than 10 but output not 1");
+            NewItemPage obj = new NewItemPage(true);
+            var output = obj.IsValidLevel(13);
+            Assert.AreEqual(output, 1, 0, "input higher than 12 but output not 1");
         }
 
         [Test]
-        public void trueForEquals5()
+        public void LevelTrueForEquals0()
         {
-            ClassForUnitTest obj = new ClassForUnitTest();
-            var output = obj.isBetween5and10(5);
-            Assert.AreEqual(output, 0, 0, "input is 5 but output not 0");
+            NewItemPage obj = new NewItemPage(true);
+            var output = obj.IsValidLevel(0);
+            Assert.AreEqual(output, 0, 0, "input is 0 but output not 0");
         }
 
         [Test]
-        public void trueForEquals10()
+        public void LevelTrueForEquals12()
         {
-            ClassForUnitTest obj = new ClassForUnitTest();
-            var output = obj.isBetween5and10(10);
-            Assert.AreEqual(output, 0, 0, "input is 10 but output not 0");
+            NewItemPage obj = new NewItemPage(true);
+            var output = obj.IsValidLevel(12);
+            Assert.AreEqual(output, 0, 0, "input is 12 but output not 0");
         }
 
         [Test]
-        public void trueForbetween5and10()
+        public void LevelTrueForbetween0and12()
         {
-            ClassForUnitTest obj = new ClassForUnitTest();
-            var output = obj.isBetween5and10(7);
+            NewItemPage obj = new NewItemPage(true);
+            var output = obj.IsValidLevel(7);
             Assert.AreEqual(output, 0, 0, "input is valid but output not 0");
+        }
+
+        [Test]
+        public void AmountFalseForLowerThan0()
+        {
+            NewItemPage obj = new NewItemPage(true);
+            var output = obj.IsValidAmount(-1);
+            Assert.False(output);
+        }
+        [Test]
+        public void AmountFalseForEqualTo0()
+        {
+            NewItemPage obj = new NewItemPage(true);
+            var output = obj.IsValidAmount(0);
+            Assert.False(output);
+        }
+        [Test]
+        public void AmountTrueForHigherThan0()
+        {
+            NewItemPage obj = new NewItemPage(true);
+            var output = obj.IsValidAmount(1);
+            Assert.True(output);
         }
     }
 }
