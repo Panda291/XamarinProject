@@ -16,6 +16,8 @@ namespace XamarinProject.Views
         public Card Card { get; set; }
         private Label TypeLabel { get; set; }
         private Label AttributeLabel { get; set; }
+        private Label RarityLabel { get; set; }
+        private Label QualityLabel { get; set; }
         
         private bool Cancel { get; set; }
 
@@ -31,6 +33,10 @@ namespace XamarinProject.Views
             TypeLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Type));
             AttributeLabel = new Label();
             AttributeLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Attribute));
+            RarityLabel = new Label();
+            RarityLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Rarity));
+            QualityLabel = new Label();
+            QualityLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: Quality));
             BindingContext = this;
         }
 
@@ -39,12 +45,20 @@ namespace XamarinProject.Views
             Cancel = false;
             Card.Type = TypeLabel.Text;
             Card.Attribute = AttributeLabel.Text;
+            Card.Rarity = RarityLabel.Text;
+            Card.Quality = QualityLabel.Text;
             if (IsValidLevel(Card.Level) != 0)
             {
                 Level.BackgroundColor = Color.Red;
                 Cancel = true;
             } else Level.BackgroundColor = Color.Default;
 
+            if (!IsValidAmount(Card.Amount))
+            {
+                Amount.BackgroundColor = Color.Red;
+                Cancel = true;
+            } else Amount.BackgroundColor = Color.Default;
+            
             if (Card.Type == null)
             {
                 Type.BackgroundColor = Color.Red;
@@ -57,7 +71,19 @@ namespace XamarinProject.Views
                 Cancel = true;
             } else Attribute.BackgroundColor = Color.Default;
 
-            if (Card.Name == "")
+            if (Card.Quality == null)
+            {
+                Quality.BackgroundColor = Color.Red;
+                Cancel = true;
+            } else Quality.BackgroundColor = Color.Default;
+            
+            if (Card.Rarity == null)
+            {
+                Rarity.BackgroundColor = Color.Red;
+                Cancel = true;
+            } else Rarity.BackgroundColor = Color.Default;
+            
+            if (string.IsNullOrEmpty(Card.Name))
             {
                 Name.BackgroundColor = Color.Red;
                 Cancel = true;
@@ -80,6 +106,12 @@ namespace XamarinProject.Views
             if (Lvl < 0) return -1;
             if (Lvl > 12) return 1;
             return 0;
+        }
+
+        bool IsValidAmount(int Amount)
+        {
+            if (Amount <= 0) return false;
+            return true;
         }
     }
 }

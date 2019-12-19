@@ -17,6 +17,8 @@
             <Label Text="Name" FontSize="Medium" />
             <Entry Text="{Binding Card.Name}" d:Placeholder="Name" FontSize="Small" x:Name="Name"/>
             <Label Text="Type" FontSize="Medium" />
+            <Label Text="Level" FontSize="Medium" />
+            <Entry Keyboard="Numeric" Text="{Binding Card.Level}" x:Name="Level"/>
             <Picker x:Name="Type"
                     Title="Select a Type"
                     TitleColor="Black">
@@ -49,8 +51,40 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            <Label Text="Level" FontSize="Medium" />
-            <Entry Keyboard="Numeric" Text="{Binding Card.Level}" x:Name="Level"/>
+            <Label Text="Quality" FontSize="Medium" />
+            <Picker x:Name="Quality"
+                    Title="Select a Quality"
+                    TitleColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Mint</x:String>
+                        <x:String>Near Mint</x:String>
+                        <x:String>Excellent</x:String>
+                        <x:String>Good</x:String>
+                        <x:String>Lightly played</x:String>
+                        <x:String>Played</x:String>
+                        <x:String>Poor</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Rarity" FontSize="Medium" />
+            <Picker x:Name="Rarity"
+                    Title="Select a Rarity"
+                    TitleColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Prismatic Secret</x:String>
+                        <x:String>Secret</x:String>
+                        <x:String>Ultimate</x:String>
+                        <x:String>Ultra</x:String>
+                        <x:String>Super</x:String>
+                        <x:String>Uncommon</x:String>
+                        <x:String>Common</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Amount" FontSize="Medium" />
+            <Entry Keyboard="Numeric" Text="{Binding Card.Amount}" x:Name="Amount"/>
         </StackLayout>
     </ContentPage.Content>
     

@@ -41,16 +41,15 @@
                                 LineBreakMode="NoWrap" 
                                 Style="{DynamicResource ListItemTextStyle}" 
                                 FontSize="16" />
-                            <Label Text="{Binding Type}" 
-                                d:Text="{Binding .}"
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            <Label Text="{Binding Attribute}" 
-                                d:Text="{Binding .}"
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
+                            <Label FontSize="13">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Type}" />
+                                        <Span Text=" / " />
+                                        <Span Text="{Binding Attribute}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

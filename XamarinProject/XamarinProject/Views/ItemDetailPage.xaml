@@ -14,12 +14,19 @@
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Name:" FontSize="Medium" />
         <Label Text="{Binding Card.Name}" d:Text="Name" FontSize="Small"/>
+        <Label Text="Level:" FontSize="Medium" />
+        <Label Text="{Binding Card.Level}" d:Text="Type" FontSize="Small"/>
         <Label Text="Type:" FontSize="Medium" />
         <Label Text="{Binding Card.Type}" d:Text="Type" FontSize="Small"/>
         <Label Text="Attribute:" FontSize="Medium" />
         <Label Text="{Binding Card.Attribute}" d:Text="Type" FontSize="Small"/>
-        <Label Text="Level:" FontSize="Medium" />
-        <Label Text="{Binding Card.Level}" d:Text="Type" FontSize="Small"/>
+        <Label Text="Rarity:" FontSize="Medium" />
+        <Label Text="{Binding Card.Rarity}" d:Text="Type" FontSize="Small"/>
+        <Label Text="Quality:" FontSize="Medium" />
+        <Label Text="{Binding Card.Quality}" d:Text="Type" FontSize="Small"/>
+        <Label Text="Amount:" FontSize="Medium" />
+        <Label Text="{Binding Card.Amount}" d:Text="Type" FontSize="Small"/>
+        
     </StackLayout>
     
 </ContentPage>
